@@ -5,21 +5,21 @@
 class Ox < Formula
   desc "Infrastructure guidance for AI coding agents"
   homepage "https://sageox.ai"
-  version "0.14.0"
+  version "0.15.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sageox/ox-cli/releases/download/v0.14.0/ox-cli_0.14.0_darwin_amd64.tar.gz"
-      sha256 "94f1bb3de83d198f48e965fc4efdb30d74c84cfa4e1dc93d25243436e9ed9ef4"
+      url "https://github.com/sageox/ox-cli/releases/download/v0.15.0/ox-cli_0.15.0_darwin_amd64.tar.gz"
+      sha256 "396bba028b93f0cb3aae4346cacf506d4fc2281dbf55a884fc5a6a96aef26874"
 
       def install
         bin.install "ox"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sageox/ox-cli/releases/download/v0.14.0/ox-cli_0.14.0_darwin_arm64.tar.gz"
-      sha256 "c3c91295e008750d55a3acc345c6bf72775ce30c10b29fb928a6e032a99fdf5f"
+      url "https://github.com/sageox/ox-cli/releases/download/v0.15.0/ox-cli_0.15.0_darwin_arm64.tar.gz"
+      sha256 "a9851fcce46434884a0b81b64a6b9567c4cb0dde620feda6f280c41cf9ff1eb4"
 
       def install
         bin.install "ox"
@@ -29,15 +29,15 @@ class Ox < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sageox/ox-cli/releases/download/v0.14.0/ox-cli_0.14.0_linux_amd64.tar.gz"
-      sha256 "2a99b34b6a1c774b83861b487b7c54ced2f7ea6ac0439d59d93e2a3f203abe49"
+      url "https://github.com/sageox/ox-cli/releases/download/v0.15.0/ox-cli_0.15.0_linux_amd64.tar.gz"
+      sha256 "6513a3ca9566451bcceaa9d19a4aca8ec67581dc6367549c21bb34b447edef20"
       def install
         bin.install "ox"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sageox/ox-cli/releases/download/v0.14.0/ox-cli_0.14.0_linux_arm64.tar.gz"
-      sha256 "25adf1b0ccdb18022dcb04d7019ba9d8d2910e24483d05927db031bfd94443ea"
+      url "https://github.com/sageox/ox-cli/releases/download/v0.15.0/ox-cli_0.15.0_linux_arm64.tar.gz"
+      sha256 "ee5b1f57c763703444b6cc749bf21482ac73459e62c4350852342f00da9b0505"
       def install
         bin.install "ox"
       end
