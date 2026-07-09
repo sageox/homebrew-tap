@@ -25,4 +25,4 @@ brew upgrade ox
 ## More Info
 
 - [SageOx Website](https://sageox.ai)
-- [ox-cli GitHub](https://github.com/sageox/ox-cli)
+- [ox GitHub](https://github.com/sageox/ox)
