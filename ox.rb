@@ -5,42 +5,40 @@
 class Ox < Formula
   desc "The hivemind for agentic engineering"
   homepage "https://sageox.ai"
-  version "0.6.0"
+  version "0.11.1"
   license "Apache-2.0"
+
+  def install
+    bin.install "ox"
+    bin.install "ox-adapter-claude-code"
+    bin.install "ox-adapter-gemini"
+    bin.install "ox-adapter-codex"
+    bin.install "ox-adapter-amp"
+    bin.install "ox-adapter-opencode"
+    bin.install "ox-adapter-pi"
+    bin.install "ox-adapter-aider"
+    bin.install "ox-adapter-droid"
+  end
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sageox/ox/releases/download/v0.6.0/ox_0.6.0_darwin_amd64.tar.gz"
-      sha256 "4368022a7e0513131878d1d6b65a2766b82a7b1cde11396c5d0018f9d38e44c5"
-
-      def install
-        bin.install "ox"
-      end
+      url "https://github.com/sageox/ox/releases/download/v0.11.1/ox_0.11.1_darwin_amd64.tar.gz"
+      sha256 "49d125e53f896ea0aea514dc4b8b20f2acca6b09dfe87390e8de4b68ae44eeb8"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sageox/ox/releases/download/v0.6.0/ox_0.6.0_darwin_arm64.tar.gz"
-      sha256 "f38e825cd337ff77dbd9e94c0baff5f38dfd8d830e6f82ec1d529f463adc5ca6"
-
-      def install
-        bin.install "ox"
-      end
+      url "https://github.com/sageox/ox/releases/download/v0.11.1/ox_0.11.1_darwin_arm64.tar.gz"
+      sha256 "7ceb930ac96095b3c8098792195324ee259af233cd91e560a00d7dc85b1adc8c"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sageox/ox/releases/download/v0.6.0/ox_0.6.0_linux_amd64.tar.gz"
-      sha256 "4d8a42d1f187d3c6e72000a4c042699242a0651d6e71693cc405450ebd1ee568"
-      def install
-        bin.install "ox"
-      end
+      url "https://github.com/sageox/ox/releases/download/v0.11.1/ox_0.11.1_linux_amd64.tar.gz"
+      sha256 "e866062642e92d501aec56df34f2e26d5a60cc5f89d428abca374adf41d82489"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sageox/ox/releases/download/v0.6.0/ox_0.6.0_linux_arm64.tar.gz"
-      sha256 "9e6c1155c42042b81a6e6712b20c609575b91fb9238bf2f26a6dea1b5a7c2282"
-      def install
-        bin.install "ox"
-      end
+      url "https://github.com/sageox/ox/releases/download/v0.11.1/ox_0.11.1_linux_arm64.tar.gz"
+      sha256 "dfb54eb0a37ced4a8cf5fc7fc65149ba1c4089243c0ba0ce9e7f3217ec5d7e62"
     end
   end
 
