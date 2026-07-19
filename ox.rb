@@ -5,40 +5,74 @@
 class Ox < Formula
   desc "The hivemind for agentic engineering"
   homepage "https://sageox.ai"
-  version "0.11.1"
+  version "0.12.0"
   license "Apache-2.0"
-
-  def install
-    bin.install "ox"
-    bin.install "ox-adapter-claude-code"
-    bin.install "ox-adapter-gemini"
-    bin.install "ox-adapter-codex"
-    bin.install "ox-adapter-amp"
-    bin.install "ox-adapter-opencode"
-    bin.install "ox-adapter-pi"
-    bin.install "ox-adapter-aider"
-    bin.install "ox-adapter-droid"
-  end
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sageox/ox/releases/download/v0.11.1/ox_0.11.1_darwin_amd64.tar.gz"
-      sha256 "49d125e53f896ea0aea514dc4b8b20f2acca6b09dfe87390e8de4b68ae44eeb8"
+      url "https://github.com/sageox/ox/releases/download/v0.12.0/ox_0.12.0_darwin_amd64.tar.gz"
+      sha256 "17ace6e8d02c0719691febd202b18e9e481305d9a3f4ff00505ed187c6d90eb8"
+
+      define_method(:install) do
+        bin.install "ox"
+        bin.install "ox-adapter-claude-code"
+        bin.install "ox-adapter-gemini"
+        bin.install "ox-adapter-codex"
+        bin.install "ox-adapter-amp"
+        bin.install "ox-adapter-opencode"
+        bin.install "ox-adapter-pi"
+        bin.install "ox-adapter-aider"
+        bin.install "ox-adapter-droid"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sageox/ox/releases/download/v0.11.1/ox_0.11.1_darwin_arm64.tar.gz"
-      sha256 "7ceb930ac96095b3c8098792195324ee259af233cd91e560a00d7dc85b1adc8c"
+      url "https://github.com/sageox/ox/releases/download/v0.12.0/ox_0.12.0_darwin_arm64.tar.gz"
+      sha256 "8f008464595f4ab12885213407c0cfc96b82cd9408ef73a0dfa41ec96ff5987e"
+
+      define_method(:install) do
+        bin.install "ox"
+        bin.install "ox-adapter-claude-code"
+        bin.install "ox-adapter-gemini"
+        bin.install "ox-adapter-codex"
+        bin.install "ox-adapter-amp"
+        bin.install "ox-adapter-opencode"
+        bin.install "ox-adapter-pi"
+        bin.install "ox-adapter-aider"
+        bin.install "ox-adapter-droid"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sageox/ox/releases/download/v0.11.1/ox_0.11.1_linux_amd64.tar.gz"
-      sha256 "e866062642e92d501aec56df34f2e26d5a60cc5f89d428abca374adf41d82489"
+      url "https://github.com/sageox/ox/releases/download/v0.12.0/ox_0.12.0_linux_amd64.tar.gz"
+      sha256 "5bf6b66a09f269a66cdad1a0a1a665e658bd0939e05b920c828f0bd4a7d4a62e"
+      define_method(:install) do
+        bin.install "ox"
+        bin.install "ox-adapter-claude-code"
+        bin.install "ox-adapter-gemini"
+        bin.install "ox-adapter-codex"
+        bin.install "ox-adapter-amp"
+        bin.install "ox-adapter-opencode"
+        bin.install "ox-adapter-pi"
+        bin.install "ox-adapter-aider"
+        bin.install "ox-adapter-droid"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sageox/ox/releases/download/v0.11.1/ox_0.11.1_linux_arm64.tar.gz"
-      sha256 "dfb54eb0a37ced4a8cf5fc7fc65149ba1c4089243c0ba0ce9e7f3217ec5d7e62"
+      url "https://github.com/sageox/ox/releases/download/v0.12.0/ox_0.12.0_linux_arm64.tar.gz"
+      sha256 "39ba4c8d8caca21e65b677873ec7760da1e81695696d4b4907ff30f2d671e364"
+      define_method(:install) do
+        bin.install "ox"
+        bin.install "ox-adapter-claude-code"
+        bin.install "ox-adapter-gemini"
+        bin.install "ox-adapter-codex"
+        bin.install "ox-adapter-amp"
+        bin.install "ox-adapter-opencode"
+        bin.install "ox-adapter-pi"
+        bin.install "ox-adapter-aider"
+        bin.install "ox-adapter-droid"
+      end
     end
   end
 
