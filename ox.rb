@@ -5,13 +5,13 @@
 class Ox < Formula
   desc "The hivemind for agentic engineering"
   homepage "https://sageox.ai"
-  version "0.23.0"
+  version "0.24.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sageox/ox/releases/download/v0.23.0/ox_0.23.0_darwin_amd64.tar.gz"
-      sha256 "a7d3eafae66b1a19a70946ae3bf5c51957ac726eda0d4d5b6453ac8f80ffd50b"
+      url "https://github.com/sageox/ox/releases/download/v0.24.2/ox_0.24.2_darwin_amd64.tar.gz"
+      sha256 "b9120ae5887f104e83b5d983c31b0783d0312111a2b4e7b4565ce032c20d0431"
 
       define_method(:install) do
         bin.install "ox"
@@ -25,11 +25,12 @@ class Ox < Formula
         bin.install "ox-adapter-aider"
         bin.install "ox-adapter-droid"
         bin.install "ox-adapter-goose"
+        bin.install "ox-adapter-cursor"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sageox/ox/releases/download/v0.23.0/ox_0.23.0_darwin_arm64.tar.gz"
-      sha256 "86b59d41ea770958658119006ae452d50f3a43d0b475285f949e0376a247b96f"
+      url "https://github.com/sageox/ox/releases/download/v0.24.2/ox_0.24.2_darwin_arm64.tar.gz"
+      sha256 "9ed2677f0c64841d1935d8d92b84ae59e1caa372c904828bc80a5096f6ee28ce"
 
       define_method(:install) do
         bin.install "ox"
@@ -43,14 +44,15 @@ class Ox < Formula
         bin.install "ox-adapter-aider"
         bin.install "ox-adapter-droid"
         bin.install "ox-adapter-goose"
+        bin.install "ox-adapter-cursor"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sageox/ox/releases/download/v0.23.0/ox_0.23.0_linux_amd64.tar.gz"
-      sha256 "b65f8be2c229f8ae5d73e0b3e2e11725b5471e5f69c83cea9f6dc1f36b3345ee"
+      url "https://github.com/sageox/ox/releases/download/v0.24.2/ox_0.24.2_linux_amd64.tar.gz"
+      sha256 "97a78be55be9ea041f68002235d74d0b24e92bd3f9cdda1c20e2aba2c7708d0d"
       define_method(:install) do
         bin.install "ox"
         bin.install "ox-adapter-claude-code"
@@ -63,11 +65,12 @@ class Ox < Formula
         bin.install "ox-adapter-aider"
         bin.install "ox-adapter-droid"
         bin.install "ox-adapter-goose"
+        bin.install "ox-adapter-cursor"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sageox/ox/releases/download/v0.23.0/ox_0.23.0_linux_arm64.tar.gz"
-      sha256 "e96ea3a94c328723577b25fb0e8ddf95524229b0b3ae85a08753f7f362ffcb53"
+      url "https://github.com/sageox/ox/releases/download/v0.24.2/ox_0.24.2_linux_arm64.tar.gz"
+      sha256 "07212d34cb473afbf373f7735aa500570050162f9063d0cce549dd8d45f5b78e"
       define_method(:install) do
         bin.install "ox"
         bin.install "ox-adapter-claude-code"
@@ -80,6 +83,7 @@ class Ox < Formula
         bin.install "ox-adapter-aider"
         bin.install "ox-adapter-droid"
         bin.install "ox-adapter-goose"
+        bin.install "ox-adapter-cursor"
       end
     end
   end
