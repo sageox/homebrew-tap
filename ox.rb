@@ -5,13 +5,13 @@
 class Ox < Formula
   desc "The hivemind for agentic engineering"
   homepage "https://sageox.ai"
-  version "0.26.0"
+  version "0.27.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sageox/ox/releases/download/v0.26.0/ox_0.26.0_darwin_amd64.tar.gz"
-      sha256 "90c95347a2f7df30284c15d65a25b75f70cfd6488fe602514d36869e858f736f"
+      url "https://github.com/sageox/ox/releases/download/v0.27.2/ox_0.27.2_darwin_amd64.tar.gz"
+      sha256 "23d55f457a9334d90dc5a6f09cd110b777aa28882b208c7387c4067c052e4cb8"
 
       define_method(:install) do
         bin.install "ox"
@@ -29,8 +29,8 @@ class Ox < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sageox/ox/releases/download/v0.26.0/ox_0.26.0_darwin_arm64.tar.gz"
-      sha256 "300c905f690188bb7ebb43a872336a86696f7fa4b65d1e55e6a8ebbec7894664"
+      url "https://github.com/sageox/ox/releases/download/v0.27.2/ox_0.27.2_darwin_arm64.tar.gz"
+      sha256 "ec781c2aa8a82575e5eb8ab00ab344fe65553b91b7ae4ee1f33ffa10534d3b96"
 
       define_method(:install) do
         bin.install "ox"
@@ -51,8 +51,8 @@ class Ox < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sageox/ox/releases/download/v0.26.0/ox_0.26.0_linux_amd64.tar.gz"
-      sha256 "201500fe39268d7adff77089f8270f24a1f0136b66ddd681430df29385b2e5ab"
+      url "https://github.com/sageox/ox/releases/download/v0.27.2/ox_0.27.2_linux_amd64.tar.gz"
+      sha256 "0321de832ee9e8adb46bc0ec6a790d0282aa3744a4137b69b6055a6afcb83dbd"
       define_method(:install) do
         bin.install "ox"
         bin.install "ox-adapter-claude-code"
@@ -69,8 +69,8 @@ class Ox < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sageox/ox/releases/download/v0.26.0/ox_0.26.0_linux_arm64.tar.gz"
-      sha256 "3faa833e3219ed838e88684204700d54eae95f7eb947b3b7505f0c866e569273"
+      url "https://github.com/sageox/ox/releases/download/v0.27.2/ox_0.27.2_linux_arm64.tar.gz"
+      sha256 "b9201f64131ffc7a22038cead5f6fe8330166c515ac169c9d27b757859d6d5f4"
       define_method(:install) do
         bin.install "ox"
         bin.install "ox-adapter-claude-code"
